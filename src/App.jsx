@@ -7,16 +7,11 @@ function App() {
 
   // Display (render)
   return (
-    <div>
-        <BrowserRouter>
           <Routes>
             <Route path="/" element={<LoginPage />}/>
             <Route path="/order/:firstname" element={<OrderPage />}/>
             <Route path="*" element={<ErrorPage/>}/>
-          </Routes>
-        </BrowserRouter>
-        {/*<LoginPage />*/}
-    </div>
+          </Routes>     
   )
 }
 
