@@ -9,7 +9,6 @@ function LoginForm() {
   // Set behavior
   const handleSubmit = event => {
     event.preventDefault();
-    alert(`Bonjour ${firstname}`);
     navigate(`/order/${firstname}`)
     setFirstname("");
   }
