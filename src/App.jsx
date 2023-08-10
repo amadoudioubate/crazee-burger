@@ -1,12 +1,19 @@
 import LoginPage from "./Components/Pages/LoginPage/LoginPage"
-
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import OrderPage from "./Components/Pages/OrderPage/OrderPage"
 function App() {
  
 
   // Display (render)
   return (
     <div>
-        <LoginPage />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<LoginPage />}/>
+            <Route path="/order" element={<OrderPage />}/>
+          </Routes>
+        </BrowserRouter>
+        {/*<LoginPage />*/}
     </div>
   )
 }
