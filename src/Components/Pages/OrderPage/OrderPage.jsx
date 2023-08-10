@@ -1,19 +1,17 @@
 import React from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 export default function OrderPage() {
     // State
-    const navigation = useNavigate();
-    const params = useParams();
+    const { firstname } = useParams();
 
-    console.log(params)
-    // Set behavior
-    const handleClick = () => navigation("/");
     // Display (render)
   return (
     <div>
-        <h2>Bonjour {params.firstname}</h2>
-        <button onClick={handleClick}>Déconnexion</button>
+        <h2>Bonjour {firstname}</h2>
+        <Link to='/'>
+          <button>Déconnexion</button>
+        </Link>   
     </div>
   )
 }
